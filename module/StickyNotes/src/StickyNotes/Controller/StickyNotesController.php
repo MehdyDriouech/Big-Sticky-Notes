@@ -12,11 +12,16 @@ namespace StickyNotes\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+error_reporting(E_ALL ^ E_DEPRECATED);
+
 class StickyNotesController extends AbstractActionController {
+
+
 
     protected $_stickyNotesTable;
 
     public function indexAction() {
+
         return new ViewModel(array(
                     'stickynotes' => $this->getStickyNotesTable()->fetchAll(),
                 ));

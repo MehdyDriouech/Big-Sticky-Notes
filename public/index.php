@@ -5,6 +5,8 @@
  */
 chdir(dirname(__DIR__));
 
+error_reporting(E_DEPRECATED);
+
 // Setup autoloading
 require 'init_autoloader.php';
 
